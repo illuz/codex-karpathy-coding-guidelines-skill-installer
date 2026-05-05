@@ -156,4 +156,6 @@ info ""
 info "Usage example:"
 info "  Use \$karpathy-coding-guidelines 帮我用最小改动修复这个 bug，并说明验证方式。"
 info ""
-info "Note: restart Codex or open a new session if the skill is not immediately visible."
+if [ "${CI:-0}" != "1" ]; then
+  info "Note: restart Codex or open a new session if the skill is not immediately visible."
+fi
